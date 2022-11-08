@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    
+
+    <title>Sale</title>
+</head>
+<body>
+    <article>
+        <section id="header">
+            <div>
+                <h1 id="header-content">THANH TOÁN</h1>
+                <hr>
+                <nav>
+                    <div>Item</div>
+                    <div>Quantity</div>
+                    <div>Price</div>
+                    <div>Total</div>
+                    <div>Remove</div>
+                </nav>
+                <div class="order">
+                    <ul class="order-items">
+                        <li class="order-list">
+                            <div>
+                                <img src="img/15-7-scaled-e1650708800882.jpg" alt="">
+                                <span id="name-text">MlemMlem</span>
+                            </div>
+                        </li>
+                        <li class="quantity">
+                            <span>
+                                <button onclick="giamSoLuong() ,thanhtoan()" >-</button>
+                                <input id="quantity-value" onkeyup="thanhtoan(this)" type="number" min="1" value="1" placeholder="1" onchange="thanhtoan(this)">
+                                <button onclick="tangSoLuong(),thanhtoan()">+</button>
+                            </span>
+                        </li>
+                        <li class="price">
+                            <span id="tien">100</span>
+                            <span>USD</span>
+                        </li>
+                        <li class="total">
+                            <p id="thanhtien">100</p>
+                            <span>USD</span>
+                            
+                        </li>
+                        <li class="remove">
+                            <img src="img/download.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div id="text-money">
+                    <h1>Total:</h1>
+                    <h1 id="thanhtien2">100</h1>
+                    <h1>USD</h1>
+                </div>
+
+            </div>
+        </section>
+        <section id="body">
+            <div id="right">
+                <table>
+                    <div> 1.Thông tin cá nhân</div>
+                    <form action="#">
+                       
+                        <tr>
+                            <td>Name: </td>    
+                            <td>
+                                <input type="text" placeholder="Hugnh26n10ne">
+                            </td>          
+                        </tr>
+                        <tr>
+                            <td>Address: </td> 
+                            <td>
+                                <input type="text" placeholder="Xuân Đồng">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email: </td> 
+                            <td>
+                                <input type="text" placeholder="hugnh26n10ne@gmailcom">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Telephone: </td> 
+                            <td>
+                                <input type="text">
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>City: </td> 
+                            <td>
+                                <input type="text" placeholder="Hà Nội">
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>Country: </td> 
+                            <td>
+                               <input type="text" placeholder="Việt Nam">
+                            </td> 
+                        </tr>
+                       <tr>
+                            <td>Zip Code: </td> 
+                            <td>
+                                <input type="text">
+                            </td>  
+                       </tr>        
+                    </form>
+                </table>
+            </div>
+            <div id="left">
+                <table>
+                   <div>2.Phương thức thanh toán</div> 
+                        <form action="#">
+                            <tr>
+                                <td> 
+                                    <ul>
+                                        <li>
+                                            <input type="radio" class="no1">Chuyển khoản Ngân Hàng MBbank (Không mất phí thanh toán)
+                                            <ul>
+                                                <li id="icons">Thông tin người nhận :
+                                                    <ul>
+                                                        <li>Name: Đàm Đình Hưng</li>
+                                                        <li>STK: 120920048899</li>
+                                                    </ul>
+                                                </li>
+                                                
+                                            </ul>
+                                            
+                                        </li>
+                                        
+                                    </ul>                                                                    
+                                </td>
+                           </tr>
+                           <tr>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <input type="radio">Thanh toán bằng thẻ Visa hoặc Master Card (Phí thanh toán 0.29$)
+                                            <ul>
+                                                <li id="icons">Thông tin người nhận :
+                                                    <ul>
+                                                        <li>Name: Đàm Đình Hưng</li>
+                                                        <li>STK: 120920048899</li>
+                                                    </ul>
+                                                </li>
+                                                
+                                            </ul>
+                                            
+                                        </li>
+                                        
+                                    </ul> 
+                                </td>
+                           </tr>
+                           <tr>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <input type="radio">Thanh toán Paypal (Phí thanh toán 0.29$)
+                                            <ul>
+                                                <li id="icons">Thông tin người nhận :
+                                                    <ul>
+                                                        <li>Name: Đàm Đình Hưng</li>
+                                                        <li>STK: 120920048899</li>
+                                                    </ul>
+                                                </li>
+                                                
+                                            </ul>
+                                            
+                                        </li>
+                                        
+                                    </ul> 
+                                </td>
+                           </tr>
+                           <tr>
+                                <td>
+                                    <input type="radio">Đổi thẻ
+                                </td>
+                           </tr>
+                           <tr>
+                                <td>
+                                    <p>Sale Currency: </p>
+                                    <select name="" id="">
+                                        <option value="">Select...</option>
+                                        <option value="01">-20%</option>
+                                        <option value="02">-40%</option>
+                                        <option value="03">-60%</option>
+                                        <option value="04">-80%</option>
+                                    </select>
+                                </td>
+                           </tr>
+                        </form>
+                   
+                </table>
+            </div>
+        </section>
+        <section id="footer">
+            <div>
+                <button>Mua thêm</button>
+            </div>
+            <div>
+                <button>Thanh toán</button>
+            </div>
+        </section>
+    </article>
+    <script src="js/javascript.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+</body>
+</html>
