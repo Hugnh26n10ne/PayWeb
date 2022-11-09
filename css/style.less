@@ -68,12 +68,16 @@ body
                             transform: translate(27rem,0.2rem);
                         }
                         li.remove{
-                            transform: translate(2000%,0.2rem);
+                            position: absolute;
+                            transform: translate(3300%,0.2rem);
                             img{
                                 height: 2rem;
                                 width: 2rem;
                             }
                             
+                        }
+                        li.remove:hover{
+                            cursor: pointer;
                         }
                 }              
             } 
@@ -99,17 +103,25 @@ body
     margin-left:1rem;
     #right{
         font-weight: bold;
-        line-height: 2rem;
+        line-height: 0rem;
+        
         div{
+            padding-top:1.5rem;
+            padding-bottom:1.5rem ;
             font-size: 20px;
         }
         table{
             font-weight: bold;
+            
             td{
-                padding: 0 5px;
+                padding: 0.5rem 5px;
                 input{
                     width: 20rem;
                 }
+                
+            }
+            span{
+                color: red;
             }
         }
     }
@@ -119,6 +131,8 @@ body
         div{
             font-size: 20px;
             font-weight: bold;
+            padding-top:1.5rem;
+            padding-bottom:1.5rem ;
             
             
         }
@@ -128,6 +142,7 @@ body
                     ul{
                         li{
                             ul{
+                                
                                 font-weight: normal;
                                 li{                                 
                                     ul{

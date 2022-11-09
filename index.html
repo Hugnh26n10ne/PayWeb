@@ -49,7 +49,7 @@
                             
                         </li>
                         <li class="remove">
-                            <img src="img/download.png" alt="">
+                            <img src="img/download.png" alt="" onclick="remove()">
                         </li>
                     </ul>
                 </div>
@@ -68,47 +68,90 @@
                     <form action="#">
                        
                         <tr>
-                            <td>Name: </td>    
+                            <td rowspan="2">Name: </td>    
                             <td>
-                                <input type="text" placeholder="Hugnh26n10ne">
+                                <input id="name" type="text" placeholder="Hugnh26n10ne">
                             </td>          
+                            
                         </tr>
                         <tr>
-                            <td>Address: </td> 
                             <td>
-                                <input type="text" placeholder="Xuân Đồng">
+                                <span id="e_name"></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>Email: </td> 
+                            <td rowspan="2">Address: </td> 
                             <td>
-                                <input type="text" placeholder="hugnh26n10ne@gmailcom">
+                                <input id="address" type="text" placeholder="Xuân Đồng">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td>
+                                <span id="e_address"></span>
                             </td>
                         </tr>
                         <tr>
-                            <td>Telephone: </td> 
+                            <td rowspan="2">Email: </td> 
                             <td>
-                                <input type="text">
-                            </td> 
+                                <input id="email" type="text" placeholder="hugnh26n10ne@gmailcom">
+                            </td>
+                            
                         </tr>
                         <tr>
-                            <td>City: </td> 
                             <td>
-                                <input type="text" placeholder="Hà Nội">
-                            </td> 
+                                <span id="e_email"></span>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Country: </td> 
+                            <td rowspan="2">Telephone: </td> 
                             <td>
-                               <input type="text" placeholder="Việt Nam">
+                                <input id="telephone" type="text">
                             </td> 
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <span id="e_telephone"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">City: </td> 
+                            <td>
+                                <input id="city" type="text" placeholder="Hà Nội">
+                            </td> 
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <span id="e_city"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Country: </td> 
+                            <td>
+                               <input id="country" type="text" placeholder="Việt Nam">
+                            </td> 
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <span id="e_country"></span>
+                            </td>
                         </tr>
                        <tr>
-                            <td>Zip Code: </td> 
+                            <td rowspan="2">Zip Code: </td> 
                             <td>
-                                <input type="text">
+                                <input id="code" type="text">
                             </td>  
-                       </tr>        
+                            
+                       </tr>  
+                       <tr>
+                            <td>
+                                <span id="e_code"></span>
+                            </td>
+                       </tr>
+                             
                     </form>
                 </table>
             </div>
@@ -120,9 +163,9 @@
                                 <td> 
                                     <ul>
                                         <li>
-                                            <input type="radio" class="no1">Chuyển khoản Ngân Hàng MBbank (Không mất phí thanh toán)
-                                            <ul>
-                                                <li id="icons">Thông tin người nhận :
+                                            <input name="radios" onclick="tichradio(),botichradio()" checked type="radio" class="no1">Chuyển khoản Ngân Hàng MBbank (Không mất phí thanh toán)
+                                            <ul style="display:block ;">
+                                                <li name="radio" id="icons">Thông tin người nhận :
                                                     <ul>
                                                         <li>Name: Đàm Đình Hưng</li>
                                                         <li>STK: 120920048899</li>
@@ -140,9 +183,9 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            <input type="radio">Thanh toán bằng thẻ Visa hoặc Master Card (Phí thanh toán 0.29$)
-                                            <ul>
-                                                <li id="icons">Thông tin người nhận :
+                                            <input name="radios" onclick="tichradio(),botichradio()" type="radio">Thanh toán bằng thẻ Visa hoặc Master Card (Phí thanh toán 0.29$)
+                                            <ul style="display:none ;">
+                                                <li name="radio" id=""  >Thông tin người nhận :
                                                     <ul>
                                                         <li>Name: Đàm Đình Hưng</li>
                                                         <li>STK: 120920048899</li>
@@ -160,9 +203,9 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            <input type="radio">Thanh toán Paypal (Phí thanh toán 0.29$)
-                                            <ul>
-                                                <li id="icons">Thông tin người nhận :
+                                            <input name="radios" onclick="tichradio(),botichradio()" type="radio">Thanh toán Paypal (Phí thanh toán 0.29$)
+                                            <ul style="display:none ;">
+                                                <li name="radio" id="">Thông tin người nhận :
                                                     <ul>
                                                         <li>Name: Đàm Đình Hưng</li>
                                                         <li>STK: 120920048899</li>
@@ -178,18 +221,21 @@
                            </tr>
                            <tr>
                                 <td>
-                                    <input type="radio">Đổi thẻ
+                                    <input name="radios" onclick="tichradio(), botichradio()" type="radio">Đổi thẻ                                 
+                                    <ul style="display:none ;">
+                                        <li name="radio"></li>
+                                    </ul>
                                 </td>
                            </tr>
                            <tr>
                                 <td>
                                     <p>Sale Currency: </p>
-                                    <select name="" id="">
-                                        <option value="">Select...</option>
-                                        <option value="01">-20%</option>
-                                        <option value="02">-40%</option>
-                                        <option value="03">-60%</option>
-                                        <option value="04">-80%</option>
+                                    <select name="" id="giamgia" onchange="thanhtoan()">
+                                        <option  value="1">Select...</option>
+                                        <option  value="20">-20%</option>
+                                        <option  value="40">-40%</option>
+                                        <option  value="60">-60%</option>
+                                        <option  value="80">-80%</option>
                                     </select>
                                 </td>
                            </tr>
@@ -200,10 +246,10 @@
         </section>
         <section id="footer">
             <div>
-                <button>Mua thêm</button>
+                <button onclick="muathem()">Mua thêm</button>
             </div>
             <div>
-                <button>Thanh toán</button>
+                <button id="checks" onclick="checkthongtin(), checkdk()">Thanh toán</button>
             </div>
         </section>
     </article>

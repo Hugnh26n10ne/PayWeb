@@ -66,11 +66,15 @@ body {
   transform: translate(27rem, 0.2rem);
 }
 #header div.order .order-items li.remove {
-  transform: translate(2000%, 0.2rem);
+  position: absolute;
+  transform: translate(3300%, 0.2rem);
 }
 #header div.order .order-items li.remove img {
   height: 2rem;
   width: 2rem;
+}
+#header div.order .order-items li.remove:hover {
+  cursor: pointer;
 }
 #header div#text-money {
   display: flex;
@@ -92,19 +96,24 @@ body {
 }
 #body #right {
   font-weight: bold;
-  line-height: 2rem;
+  line-height: 0rem;
 }
 #body #right div {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   font-size: 20px;
 }
 #body #right table {
   font-weight: bold;
 }
 #body #right table td {
-  padding: 0 5px;
+  padding: 0.5rem 5px;
 }
 #body #right table td input {
   width: 20rem;
+}
+#body #right table span {
+  color: red;
 }
 #body #left {
   line-height: 2rem;
@@ -113,6 +122,8 @@ body {
 #body #left div {
   font-size: 20px;
   font-weight: bold;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 #body #left table tr td ul li ul {
   font-weight: normal;
