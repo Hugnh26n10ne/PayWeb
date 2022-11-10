@@ -195,6 +195,6 @@ function checkdk(){
     {
         document.getElementById('checks').disabled= false;
         window.location='https://motphimtv.info/xem-phim/chiec-bat-lua-va-vay-cong-chua-tap-4-10707_127327.html';
-
+        
     }
 }
